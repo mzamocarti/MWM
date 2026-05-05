@@ -1,1 +1,757 @@
+body {
+  margin: 0;
+  font-family: Arial;
+}
 
+/* NAV */
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background: #f5f3ee; /* soft beige background */
+}
+
+/* LOGO */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+  font-size: 20px;
+  color: #2f3e1f;
+}
+
+.logo img {
+  width: 60px;
+  height: 60px;
+}
+
+/* NAV LINKS */
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #2f3e1f;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #5c7c2f;
+}
+
+/* BUTTON */
+.btn-primary {
+  background: #5c7c2f;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 30px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background: #4b6826;
+}
+
+/* HERO */
+.hero {
+  height: 90vh;
+  background: url("../images/hero2.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  color: white;
+  padding: 60px;
+}
+
+.hero h1 {
+  font-size: 50px;
+
+}
+
+.hero p{
+  color: white;
+  background-color: rgba(0, 0, 0, 0.24);
+border-radius: 18px;
+box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+.hero p2{
+  color: white;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* BUTTONS */
+.btn {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.primary {
+  background: green;
+  color: white;
+}
+
+.light {
+  background: white;
+}
+
+.services {
+  padding: 80px 10%;
+  text-align: center;
+  font-family: sans-serif;
+  background-color: #ffffff;
+}
+
+.services h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: #1a1a1a;
+}
+
+.services > p {
+  color: #555;
+  margin-bottom: 50px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  background-color: #f2eee8; /* The beige color from your image */
+  padding: 40px;
+  border-radius: 40px; /* High rounding for that pill-box look */
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.icon-box {
+  background-color: #e2ded6; /* Slightly darker beige for icon circle */
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  color: #5b634c; /* Muted olive icon color */
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  margin: 0;
+  color: #222;
+}
+
+.card p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #444;
+  margin: 0;
+}
+
+.learn-more {
+  margin-top: 10px;
+  display: inline-block;
+  color: #5b634c;
+  text-decoration: underline;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+/* STATS SECTION */
+.stats {
+  position: relative;
+  /* Replace 'your-image.jpg' with your actual background image URL */
+  background: url("../images/stats.jpg") no-repeat center center/cover;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+}
+
+.stats-overlay {
+  background: rgba(0, 0, 0, 0.6); /* This creates the dark tint */
+  width: 100%;
+  height: 100%;
+  padding: 80px 10%;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px 40px;
+  text-align: center;
+}
+
+.stat-item {
+  color: white;
+}
+
+.stat-item i {
+  color: #c5a880; /* Muted gold/bronze color for icons */
+  margin-bottom: 10px;
+  width: 24px;
+  height: 24px;
+}
+
+.stat-item h2 {
+  font-size: 3.5rem;
+  font-weight: 600;
+  margin: 0;
+  letter-spacing: -2px;
+}
+
+.stat-item p {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-top: 5px;
+  text-transform: capitalize;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+  .stat-item h2 {
+    font-size: 2.5rem;
+  }
+  .steps {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+}
+/* PROCESS SECTION */
+.process {
+  background-color: #f2eee8; /* Light beige background */
+  padding: 100px 10%;
+  text-align: center;
+}
+
+.process h2 {
+  font-size: 2.8rem;
+  color: #1a1a1a;
+  margin-bottom: 10px;
+}
+
+.process-subtitle {
+  color: #444;
+  margin-bottom: 80px;
+}
+
+.process-steps {
+  display: flex;
+  align-items: flex-start; /* Aligns circles and lines at the top */
+  justify-content: center;
+  max-width: 1100px;
+  margin: 0 auto 60px auto;
+}
+
+.step {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.circle {
+  background-color: #5b634c; /* Dark olive green */
+  color: #f2eee8;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+/* Horizontal Connecting Lines */
+.line {
+  flex: 0.5; /* Length of the line */
+  height: 1px;
+  background-color: #ccc;
+  margin-top: 40px; /* Aligns line to the middle of the circles */
+}
+
+.step h3 {
+  font-size: 1.3rem;
+  color: #1a1a1a;
+  margin-bottom: 15px;
+}
+
+.step p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #444;
+  max-width: 250px;
+}
+
+/* View Process Details Button */
+.process-btn {
+  background-color: #a67c52; /* Muted brown from the screenshot */
+  color: white;
+  padding: 15px 40px;
+  border: none;
+  border-radius: 15px; /* Rounded-square shape */
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.process-btn:hover {
+  background-color: #8e6844;
+}
+
+/* Responsive: Hide lines and stack on mobile */
+@media (max-width: 900px) {
+  .process-steps {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+  .line {
+    display: none;
+  }
+}
+
+/* GLOBAL/SECTION RESET - MATCHING THE BEIGE BACKGROUND */
+body {
+  background-color: #f2eee8; /* The dominant background color in the screenshot */
+  font-family: sans-serif;
+  margin: 0;
+}
+
+/* ABOUT SECTION */
+.about {
+  padding: 100px 10%; /* increased padding for breatheability */
+}
+
+.about-container {
+  display: flex;
+  align-items: center; /* Vertically center the text to the image */
+  gap: 80px; /* Large, modern gap between image and text */
+}
+
+.about img {
+  width: 50%;
+  border-radius: 40px; /* High rounding for the 'pill' shape in the screenshot */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); /* Subtle shadow for depth */
+}
+
+.about-content {
+  flex: 1;
+}
+
+.about-content h2 {
+  font-size: 3rem; /* Bold, large heading */
+  line-height: 1.1;
+  color: #1a1a1a;
+  margin-bottom: 25px;
+}
+
+.about-content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #444;
+  margin-bottom: 20px; /* consistent spacing between paragraphs */
+}
+
+/* Action items (Button + Link) */
+.about-actions {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  margin-top: 35px;
+}
+
+.about-btn-primary {
+  background-color: #5b634c; /* The muted olive green from the screenshot button */
+  color: #f2eee8; /* Matching the beige background color for text contrast */
+  padding: 15px 35px;
+  border: none;
+  border-radius: 15px; /* Blocky/rounded shape used in the image */
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.about-link {
+  color: #5b634c; /* matching link color */
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+/* TESTIMONIALS SECTION */
+.testimonials {
+  background-color: #f2eee8; /* Beige background to match the screenshot */
+  padding: 80px 5%;
+  text-align: center;
+}
+
+.testimonials-header h2 {
+  font-size: 3rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 10px;
+}
+
+.testimonials-header p {
+  color: #444;
+  font-size: 1.1rem;
+  margin-bottom: 60px;
+}
+
+/* Grid Layout for 4 cards */
+.testimonial-grid {
+  display: grid;
+  /* Adjusts from 4 columns on wide screens to 1 on mobile */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Individual Card Styling */
+.t-card {
+  background-color: #f2eee8; /* Same as section background */
+  padding: 40px;
+  border-radius: 40px; /* High rounding to match the image */
+  border: 1px solid #e2ded6; /* Subtle border to define the card */
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 320px;
+  transition: background 0.3s ease;
+}
+
+.t-card:hover {
+  background-color: #ffffff; /* Subtle hover effect seen in modern UI */
+}
+
+.quote {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+  margin: 0 0 30px 0;
+}
+
+/* The separator line above the author */
+.author-info {
+  border-top: 1px solid #dcd8d0; 
+  padding-top: 20px;
+}
+
+.author-info strong {
+  display: block;
+  font-size: 1.2rem;
+  color: #1a1a1a;
+  margin-bottom: 4px;
+}
+
+.author-info span {
+  font-size: 0.95rem;
+  color: #666;
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 768px) {
+  .testimonials-header h2 {
+    font-size: 2.2rem;
+  }
+}
+
+/* CONTACT SECTION */
+.contact {
+  background-color: #5b634c; /* Specific olive green from Screenshot 2026-04-08 at 14.21.20.jpg */
+  padding: 100px 10%;
+  color: #ffffff;
+}
+
+.contact-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 80px;
+}
+
+.contact-text {
+  flex: 1;
+}
+
+.contact-text h2 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.contact-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  max-width: 500px;
+}
+
+/* Contact Details with Icons */
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 1.1rem;
+}
+
+.detail-item i {
+  width: 20px;
+  height: 20px;
+}
+
+/* THE FORM CONTAINER */
+.contact-form {
+  flex: 1;
+  background-color: #f2eee8; /* Beige card background from Screenshot 2026-04-08 at 14.21.20.jpg */
+  padding: 50px;
+  border-radius: 60px; /* High rounding for the large 'pill' container */
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  color: #1a1a1a;
+  max-width: 550px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-group label {
+  font-weight: 500;
+  color: #888; /* Muted label color */
+  font-size: 0.95rem;
+}
+
+.contact-form input, 
+.contact-form select {
+  padding: 15px;
+  border-radius: 20px; /* Rounded input fields */
+  border: 1px solid #dcd8d0;
+  background-color: rgba(255,255,255,0.4);
+  font-size: 1rem;
+  color: #333;
+}
+
+.submit-btn {
+  background-color: #a67c52; /* Rusty brown button color from the screenshot */
+  color: white;
+  padding: 20px;
+  border: none;
+  border-radius: 20px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 992px) {
+  .contact-container {
+    flex-direction: column;
+    text-align: left;
+    gap: 50px;
+  }
+}
+
+/* FOOTER */
+.footer {
+  background-color: #0d120a; /* Deep dark charcoal/green from the screenshot */
+  color: #ffffff;
+  padding: 80px 8% 40px 8%;
+  font-family: 'Inter', sans-serif;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
+  gap: 60px;
+  margin-bottom: 80px;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.footer-logo img {
+  width: 35px;
+  height: 35px;
+}
+
+.footer-brand h3 {
+  font-size: 1.4rem;
+  margin: 0;
+  font-weight: 600;
+}
+
+.footer-brand p {
+  color: #939591; /* Muted gray text */
+  line-height: 1.6;
+  font-size: 0.95rem;
+  margin-bottom: 25px;
+}
+
+/* Social Icons */
+.social-icons {
+  display: flex;
+  gap: 12px;
+}
+.social-icons i {
+  width: 20px;  /* Adjust size to match Screenshot 2026-04-08 at 14.21.28.jpg */
+  height: 20px;
+  stroke-width: 2px;
+}
+.social-icons a {
+  background: rgba(255, 255, 255, 0.1);
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  color: white;
+  transition: background 0.3s;
+}
+
+.social-icons a:hover {
+  background: #5b634c;
+}
+
+/* Link Headers */
+.footer h4 {
+  font-size: 0.85rem;
+  letter-spacing: 1.2px;
+  margin-bottom: 25px;
+  color: #ffffff;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 12px;
+}
+
+.footer-links a {
+  color: #939591;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.footer-links a:hover {
+  color: #ffffff;
+}
+
+/* Subscribe Pill */
+.subscribe-pill {
+  display: flex;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 6px;
+  border-radius: 50px; /* Full pill shape */
+  margin-top: 20px;
+}
+
+.subscribe-pill input {
+  background: transparent;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  flex: 1;
+  outline: none;
+}
+
+.sub-btn {
+  background-color: #5b634c; /* Brand olive green */
+  color: #ffffff;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 40px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 40px;
+}
+
+.bottom-left p {
+  color: #646662;
+  font-size: 0.85rem;
+  margin-bottom: 10px;
+}
+
+.legal-links {
+  display: flex;
+  gap: 20px;
+}
+
+.legal-links a {
+  color: #646662;
+  text-decoration: none;
+  font-size: 0.85rem;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+}
+
+/*smooth scrolling*/
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  /* Adjust the 80px to match the actual height of your navbar */
+  scroll-margin-top: 80px; 
+}
