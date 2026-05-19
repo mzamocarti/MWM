@@ -27,3 +27,18 @@ document.querySelector('.contact-form').addEventListener('submit', function(even
             alert('Failed to send: ' + JSON.stringify(error));
         });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  const menuToggle = document.getElementById('menu-toggle');
+  const navLinks = document.querySelectorAll('.nav-links a');
+
+  // Loop through every navigation link
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      // Uncheck the hidden input box to automatically slide the menu shut
+      if (menuToggle) {
+        menuToggle.checked = false;
+      }
+    });
+  });
+});
