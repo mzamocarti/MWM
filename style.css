@@ -64,7 +64,7 @@ body {
 /* HERO */
 .hero {
   height: 90vh;
-  background: url("../images/hero2.jpg") center/cover no-repeat;
+  background: url("images/hero2.jpg") center/cover no-repeat;
   display: flex;
   align-items: center;
   color: white;
@@ -181,7 +181,7 @@ a {
 .stats {
   position: relative;
   /* Replace 'your-image.jpg' with your actual background image URL */
-  background: url("../images/stats.jpg") no-repeat center center/cover;
+  background: url("images/stats.jpg") no-repeat center center/cover;
   min-height: 500px;
   display: flex;
   align-items: center;
