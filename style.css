@@ -854,4 +854,31 @@ section {
   .menu-toggle:checked ~ .burger-icon span:nth-child(3) {
     transform: translateY(-9px) rotate(-45deg);
   }
+  /* 1. Force the image and text to stack vertically instead of side-by-side */
+  .about-container {
+    flex-direction: column-reverse; /* Stacks text on top, image at the bottom. Use 'column' if you want image on top */
+    gap: 30px;
+    padding: 0;
+    width: 100%;
+  }
+
+  /* 2. Prevent the image from bursting past the screen bounds */
+  .about img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 30px; /* Scales down the pill shape slightly for smaller screens */
+  }
+
+  /* 3. Ensure the content takes up the full text layout space gracefully */
+  .about-content {
+    width: 100%;
+    text-align: left; /* Keeps text neat, or use 'center' if you prefer a centered mobile look */
+  }
+  
+  .about-content h2 {
+    font-size: 2.2rem; /* Softens the massive title size on mobile phones */
+    line-height: 1.2;
+  }
 }
